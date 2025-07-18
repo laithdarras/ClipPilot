@@ -24,7 +24,6 @@ def load_openai_config():
     try:
         # initialize client
         client = OpenAI()
-        print("OpenAI API configured successfully")
         return True
     except Exception as error:
         print(f"Error initializing OpenAI client: {error}")
@@ -68,7 +67,7 @@ def monitor_clipboard():
             time.sleep(1)
             
     except KeyboardInterrupt:
-        print("\nClipboard monitoring stopped.")
+        print("\nClipboard monitoring stopped. Goodbye!")
         sys.exit(0)
     except Exception as error:
         print(f"Error: {error}")
@@ -111,5 +110,5 @@ def summarize_content(text):
 
 if __name__ == "__main__":
     openai_configured = load_openai_config()
-    
+
     monitor_clipboard()
