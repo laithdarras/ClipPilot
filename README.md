@@ -1,4 +1,4 @@
-# ClipboardAI
+# ClipPilot
 
 A real-time clipboard monitoring tool that automatically summarizes copied text using OpenAI's GPT-3.5-turbo. Perfect for devs and others who want to stay focused while working with long-form content.
 
