@@ -1,67 +1,36 @@
 # ClipPilot
 
-A real-time clipboard monitoring tool that automatically summarizes copied text using OpenAI's GPT-3.5-turbo. Perfect for devs and others who want to stay focused while working with long-form content.
+A lightweight, cross-platform clipboard monitor that automatically **summarizes anything you copy** using OpenAI chat models.  
+Perfect for devs, writers, and researchers who want to stay focused while working with long-form content.
+
+## Quickstart
+
+```bash
+# Clone
+git clone <repo url>
+cd clippilot
+
+# Install
+pip install -r requirements.txt
+
+# Configure
+cp .env.example .env   # then add your OpenAI API key
+
+# Run
+python main.py
+```
 
 ![Demo](demo.gif)
 
 ## Features
 
-- **Real-time monitoring**: Automatically detects new clipboard content
-- **AI-powered summarization**: Uses OpenAI GPT-3.5-turbo for text summarization
-- **Clean terminal UI**: Formatted output with clear separation between content and summaries
-- **Error handling**: Robust error handling for API rate limits, timeouts, and network issues
+- **Real-time monitoring**: auto detects new clipboard content
+- **AI-powered summaries**: concise 2-3 bullet takeaways from copied text
+- **Resilient**: handles rate limits, timeouts, and network issues
 - **Cross-platform**: Works on Windows, macOS, and Linux
-- **Lightweight**: Minimal dependencies and fast performance
+- **Minimal**: single script, few dependencies, quick setup
 
-## Installation
 
-### Prerequisites
-
-- Python 3.7 or higher
-- pip package manager
-- OpenAI API key
-
-### Setup
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repository-url>
-   cd clipboardai
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure OpenAI API**
-
-   Create a `.env` file in the project root:
-
-   ```bash
-   # .env
-   OPENAI_API_KEY=your_openai_api_key_here
-   ```
-
-   Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
-
-## Usage
-
-1. **Start the clipboard monitor**
-
-   ```bash
-   python main.py
-   ```
-
-2. **Copy text to clipboard**
-
-   - The tool will automatically detect new content
-   - AI summaries will be displayed in the terminal
-
-3. **Stop monitoring**
-   - Press `Ctrl+C` to exit
 
 ### Example Output
 
@@ -83,9 +52,9 @@ AI Summary:
 
 ## Dependencies
 
-- **pyperclip**: Cross-platform clipboard access
+- **pyperclip**: clipboard access
 - **openai**: OpenAI API client
-- **python-dotenv**: Environment variable management
+- **python-dotenv**: environment variable management
 
 ## Configuration
 
@@ -95,13 +64,6 @@ AI Summary:
 | ---------------- | ------------------- | -------- |
 | `OPENAI_API_KEY` | Your OpenAI API key | Yes      |
 
-### API Settings
-
-The tool uses the following OpenAI API settings:
-
-- **Model**: `gpt-3.5-turbo`
-- **Max tokens**: 150 (for concise summaries)
-- **Temperature**: 0.5 (balanced creativity and focus)
 
 ## Troubleshooting
 
@@ -124,8 +86,8 @@ The tool uses the following OpenAI API settings:
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions welcome! Open an issue or PR.
 
-## Support
+## License
 
-If you encounter any issues or have questions, please open an issue on GitHub.
+MIT - feel free to use, modify, and share.
